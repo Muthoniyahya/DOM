@@ -1,4 +1,10 @@
-var lisaLab = {
+
+function Application(language1, language2, callback) {
+    const languages = `${language1} ${language2}`;
+    callback(languages);
+}
+
+var lisaLab ={
     name: "bar",
     func: function() {
         var self = this;
@@ -12,7 +18,7 @@ var lisaLab = {
 };
     lisaLab.func()
 
-// lisaLab.func(); the output will be all the names because its a global scope and can be able to access the outer and inner scope
+// lisaLab.func(); the output will be all the names because its a global scope which is bar
 // func:function can be able to access the outer scope and itself also meaning the output will be bar and the names printed inside console.log
 // function()can only access itself and not the other scopes
 
